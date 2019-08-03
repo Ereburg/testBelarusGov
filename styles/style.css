@@ -1,26 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
+@import url('../styles/belarus-map.css');
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration:  none !important;
+}
 
+/* a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #3e9a6b !important;
+} */
+a:hover .aside-regular-text {
+    color: #3e9a6b !important;
+}
 /* Header */
 
 .header-top {
     padding: 20px 0;
 }
 
-.brand-logo {
+.desktop-logo {
     width: 150px;
 }
-.header-text-container{
+
+.mobile-logo {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.header-text-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.text > span {
+.text>span {
     display: block;
     font-weight: 300;
 }
@@ -30,8 +51,9 @@ body {
     line-height: 1;
     color: #a8a8a8;
 }
+
 .header-text-middle {
-    font-size: 2em;
+    font-size: 1.9em;
     line-height: 1.5;
     color: #267653;
 }
@@ -70,6 +92,11 @@ body {
     color: #f7f8f2 !important;
 }
 
+.nav-link:hover {
+    background: #429e70;
+    color: #ffffff !important;
+}
+
 /* Main */
 
 .main {
@@ -95,7 +122,7 @@ body {
     font-size: 1.05rem;
 }
 
-.aside-text::after{
+.aside-text::after {
     content: '';
     display: block;
     position: relative;
@@ -107,7 +134,6 @@ body {
 }
 
 video {
-    min-width: 320px;
     width: 100%;
     height: 300px;
     background: #3e9a6b;
@@ -119,11 +145,120 @@ video {
     border-radius: 0 !important;
 }
 
-.news-item p{
+.news-item p {
     color: #7a797c;
 }
 
 
 .aside-regular-text {
     font-size: .9rem;
+}
+
+.box {
+    height: 50vh;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-text-middle {
+        font-size: 1.4rem;
+    }
+
+    .desktop-logo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .desktop-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .header-text-container {
+        margin-top: 30px;
+    }
+
+    .header-text-middle {
+        font-size: 1.2rem;
+    }
+
+    .counter-container {
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .counter {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header-text-date {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-desktop {
+        display: none;
+    }
+
+    .counter-container {
+        margin-top: 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .header-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-text-middle {
+        font-size: 2.6vmin;
+    }
+
+    .header-text-bottom {
+        font-size: 2.2vmin;
+    }
+
+    .counter-wrap p {
+        font-size: 2vmin;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .header-text-container {
+        text-align: center;
+    }
+
+    .header-text-date {
+        margin-bottom: 15px;
+        font-size: 10vmin;
+    }
+
+    .header-text-middle {
+        font-size: 4vmin;
+    }
+
+    .header-text-bottom {
+        font-size: 3.5vmin;
+    }
 }
