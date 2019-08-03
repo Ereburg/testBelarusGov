@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Government's site</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row header-top">
+                <div class="col d-flex align-items-center">
+                    <a class="navbar-brand mr-0" href="#"><img class="brand-logo w-100" src="Belarus_(official).svg"
+                            alt=""></a>
+                </div>
+                <div class="col-8 header-text-container">
+                    <p class="text mb-0">
+                        <span class="header-text-date">11 сентября 2016</span>
+                        <span class="header-text-middle">Выборы детатов Палаты представителей</span>
+                        <span class="header-text-bottom">Национального собрания Республики Беларусь</span>
+                    </p>
+                </div>
+                <div class="col justify-content-center flex-column d-flex align-items-center">
+                    <p class="text align-text-center">Дней до выборов</p>
+                    <div class="counter" id="counter"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-gov">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Избирательные округа</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Новости
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Возьмите</a>
+                                        <a class="dropdown-item" href="#">Меня</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">На работу</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#">Материалы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <section class="map"></section>
+                </div>
+                <div class="col-4">
+                    <aside class="aside-info">
+                        <h3 class="aside-text">
+                            Обращение Л.М. Ермошиной
+                            <span class="aside-text-small">
+                                (от 09.06.2016)
+                            </span>
+                        </h3>
+                        <video controls="controls" poster="video/duel.jpg">
+                            <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                            <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                            <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            Тег video не поддерживается вашим браузером.
+                            <a href="video/duel.mp4">Скачайте видео</a>.
+                        </video>
+                        <h3 class="aside-text">
+                            Новости
+                        </h3>
+                        <div class="news-item">
+                            <a href="#">
+                                <span class="badge badge-secondary">09.06.2016 11:24</span>
+                                <p class="aside-regular-text">
+                                    Беларусь пригласила наблюдателей от БДИПЧ ОБСЕ
+                                    и СНГ на парламентские выборы
+                                </p>
+                            </a>
+                        </div>
+                        <div class="news-item">
+                            <a href="#">
+                                <span class="badge badge-secondary">08.06.2016 21:40</span>
+                                <p class="aside-regular-text">
+                                    Физическое лицо может пожертвовать в фонд
+                                    кандидата депутаты не более 5 базовых величин
+                                </p>
+                            </a>
+                        </div>
+                        <div class="news-item">
+                            <a href="#">
+                                <span class="badge badge-secondary">08.06.2016 11:35</span>
+                                <p class="aside-regular-text">
+                                    Права международных наблюдателей на выборах в
+                                    парламент будут расширены
+                                </p>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
